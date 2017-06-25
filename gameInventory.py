@@ -2,12 +2,31 @@
 # so they work according to the specification
 
 # Displays the inventory.
+
+
 def display_inventory(inventory):
+    print('Inventory:')
+    inv_list = list(inventory.items())
+    n = 0
+    for (k, v) in inv_list:
+        print(int(v), (k))
+    for val in inventory.values():
+        n += val
+    print('Total of items in inventory: ',  n)
     pass
 
 
 # Adds to the inventory dictionary a list of items from added_items.
+
+
 def add_to_inventory(inventory, added_items):
+    # your code goes here
+    for elem in added_items:
+        if elem not in inventory:
+            inventory[elem] = 1
+            print(inventory)
+        elif elem in added_items:
+            inventory[elem] += 1
     pass
 
 
