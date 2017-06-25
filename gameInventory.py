@@ -24,9 +24,9 @@ def add_to_inventory(inventory, added_items):
     for elem in added_items:
         if elem not in inventory:
             inventory[elem] = 1
-            print(inventory)
         elif elem in added_items:
             inventory[elem] += 1
+    return inventory
     pass
 
 
